@@ -1,0 +1,572 @@
+================================================================================
+        SAP IMPLEMENTATION BLUEPRINT — NovaSpark Electronics Limited
+                          Document Version: 1.0 | April 2026
+              Approved By: Project Director, NovaSpark Electronics Ltd.
+================================================================================
+
+
+================================================================================
+1. COMPANY OVERVIEW
+================================================================================
+
+Legal Name       : NovaSpark Electronics Limited
+Industry         : Consumer Electronics & Smart Device Manufacturing
+Headquarters     : Pune, Maharashtra, India
+Founded          : 2018
+Employees        : 650+
+Annual Revenue   : Rs. 320 Crores
+
+
+--------------------------------------------------------------------------------
+1.1 Business Model
+--------------------------------------------------------------------------------
+
+PRODUCTS:
+
+  Smart Devices Division
+    - Smart Televisions
+    - Smart Home Hubs
+    - Tablet Computers
+    - Wearable Devices
+
+  Audio & Visual Division
+    - Premium Speakers
+    - Soundbars
+    - Earphones & Headphones
+
+  Power & Energy Division
+    - Power Banks & Chargers
+    - Solar Charging Accessories
+    - UPS & Inverter Systems
+
+SALES CHANNELS:
+  1. Institutional Sales (B2B)   - Direct enterprise customers
+  2. Dealer Network              - Authorised dealer channel
+  3. Online Marketplace          - Own webstore & marketplace platforms
+
+
+================================================================================
+2. ORGANIZATIONAL STRUCTURE
+================================================================================
+
+--------------------------------------------------------------------------------
+2.1 Company Code Configuration
+--------------------------------------------------------------------------------
+
+  Company Code    : NS01
+  Company Name    : NovaSpark Electronics Limited
+  City            : Pune
+  Country         : IN (India)
+  Currency        : INR (Indian Rupee)
+  Language        : EN (English)
+  Fiscal Year     : V3 (April to March - India)
+  Chart of Accts  : NSIN (India - Standard)
+  Credit Ctrl Area: NS01
+
+  Address:
+    NovaSpark Electronics Limited
+    Spark Tower, Survey No. 18
+    Hinjewadi Phase II
+    Pune - 411057, Maharashtra, India
+    Phone   : +91-20-46781234
+    Email   : connect@novaspark.in
+    Website : www.novaspark.in
+    GSTIN   : 27AADCN5678G1Z3
+    PAN     : AADCN5678G
+
+
+--------------------------------------------------------------------------------
+2.2 Sales Organization
+--------------------------------------------------------------------------------
+
+  Sales Org : NS01
+  Name      : NovaSpark Sales India
+  Address   : Same as Company Code
+  Currency  : INR
+
+  Assignment:
+    Company Code          : NS01
+    Standard Order Type   : OR
+    Standard Delivery Type: LF
+    Standard Billing Type : F2
+
+
+--------------------------------------------------------------------------------
+2.3 Distribution Channels
+--------------------------------------------------------------------------------
+
+  DC: 10 | Name: Institutional B2B  | Desc: Direct institutional sales
+  DC: 20 | Name: Dealer Network     | Desc: Authorised dealer channel
+  DC: 30 | Name: Online Marketplace | Desc: Marketplace & own webstore
+
+
+--------------------------------------------------------------------------------
+2.4 Divisions
+--------------------------------------------------------------------------------
+
+  Division: 10 | Smart Devices   | TVs, Hubs, Tablets, Wearables
+  Division: 20 | Audio & Visual  | Speakers, Soundbars, Earphones
+  Division: 30 | Power & Energy  | Chargers, Solar, UPS
+
+
+--------------------------------------------------------------------------------
+2.5 Sales Areas  (Sales Org + Distribution Channel + Division)
+--------------------------------------------------------------------------------
+
+  NS01 / 10 / 10  --  Institutional - Smart Devices
+  NS01 / 10 / 20  --  Institutional - Audio & Visual
+  NS01 / 10 / 30  --  Institutional - Power & Energy
+  NS01 / 20 / 10  --  Dealer - Smart Devices
+  NS01 / 20 / 20  --  Dealer - Audio & Visual
+  NS01 / 20 / 30  --  Dealer - Power & Energy
+  NS01 / 30 / 20  --  Online - Audio & Visual
+
+
+--------------------------------------------------------------------------------
+2.6 Plants
+--------------------------------------------------------------------------------
+
+  Plant: NS01
+    Name    : Pune Manufacturing Plant
+    City    : Pune
+    Country : IN
+    Address : Hinjewadi Phase II, Pune 411057
+    Type    : Manufacturing Plant
+    Capacity: 12,000 units/month
+
+  Plant: NS02
+    Name    : Gurugram Distribution Center
+    City    : Gurugram, Haryana
+    Country : IN
+    Address : Sector 44, Gurugram 122003
+    Type    : Distribution Center
+
+  Plant: NS03
+    Name    : Hyderabad Warehouse
+    City    : Hyderabad
+    Country : IN
+    Address : HITEC City Phase 2, Hyderabad 500081
+    Type    : Finished Goods Warehouse
+
+
+--------------------------------------------------------------------------------
+2.7 Storage Locations
+--------------------------------------------------------------------------------
+
+  Plant NS01 (Pune):
+    SL001 - Raw Materials Bay
+    SL002 - Finished Goods Store
+    SL003 - Quality Hold Zone
+    SL004 - Rejected / Quarantine
+    SL005 - Assembly Floor
+
+  Plant NS02 (Gurugram):
+    SL001 - Finished Goods
+    SL002 - Transit Buffer
+    SL003 - Customer Returns
+
+  Plant NS03 (Hyderabad):
+    SL001 - Finished Goods
+    SL002 - Marketplace Fulfillment
+
+
+--------------------------------------------------------------------------------
+2.8 Shipping Points
+--------------------------------------------------------------------------------
+
+  SP: NS01 | Pune Dispatch      | Plant NS01 | Loading Time: 2 hours
+  SP: NS02 | Gurugram Dispatch  | Plant NS02
+  SP: NS03 | Hyderabad Dispatch | Plant NS03
+
+
+--------------------------------------------------------------------------------
+2.9 Sales Offices
+--------------------------------------------------------------------------------
+
+  SO001 - Pune Corporate HQ    | Sales Org: NS01
+  SO002 - Gurugram Regional    | Sales Org: NS01
+  SO003 - Hyderabad Branch     | Sales Org: NS01
+
+
+--------------------------------------------------------------------------------
+2.10 Sales Groups
+--------------------------------------------------------------------------------
+
+  SG001 - Enterprise Sales
+  SG002 - Mid-Market Sales
+  SG003 - Dealer Relations
+  SG004 - Online & Marketplace
+
+
+================================================================================
+3. FINANCIAL ACCOUNTING CONFIGURATION
+================================================================================
+
+--------------------------------------------------------------------------------
+3.1 Chart of Accounts: NSIN
+--------------------------------------------------------------------------------
+
+  100000 - Bank - Axis Bank Main Account
+  110000 - Bank - Kotak Current Account
+  120000 - Petty Cash
+  140000 - Trade Receivables - Domestic
+  141000 - Trade Receivables - Export
+  150000 - Inventory - Raw Materials
+  151000 - Inventory - Finished Goods
+  155000 - GST Input Tax
+  155100 - GST Output Tax
+  200000 - Trade Payables
+  300000 - Share Capital
+  400000 - General Reserves
+  800000 - Revenue - Smart Devices
+  801000 - Revenue - Audio & Visual
+  802000 - Revenue - Power & Energy
+  900000 - Cost of Goods Sold
+  910000 - Operating Expenditure
+  920000 - Admin & Overhead
+  930000 - Finance Charges
+
+
+--------------------------------------------------------------------------------
+3.2 Tax Configuration
+--------------------------------------------------------------------------------
+
+  GST Setup:
+    CGST (Central GST) : 9%
+    SGST (State GST)   : 9%
+    Total GST          : 18%
+
+    Tax Code I0 - Input Tax 18%
+    Tax Code V0 - Output Tax 18%
+    Tax Code V3 - Output Tax 12% (selective products)
+    Tax Code V5 - Output Tax 5%  (selective products)
+
+  Withholding Tax:
+    TDS on Services : 2%
+    TDS on Rent     : 10%
+
+
+--------------------------------------------------------------------------------
+3.3 Payment Terms
+--------------------------------------------------------------------------------
+
+  T001 - Immediate Payment
+  T014 - Net 14 Days
+  T030 - Net 30 Days (Standard)
+  T060 - Net 60 Days
+  Z210 - 2/10 Net 30 (2% early-pay discount within 10 days)
+  Z315 - 3/15 Net 30 (3% early-pay discount within 15 days)
+
+
+--------------------------------------------------------------------------------
+3.4 Credit Management
+--------------------------------------------------------------------------------
+
+  Credit Control Area: NS01
+
+    Update       : Per Business Transaction
+    Currency     : INR
+    Credit Check : Automatic
+
+    Risk Categories:
+      Cat A - High Risk    | Limit: Rs. 5 Lakhs
+      Cat B - Medium Risk  | Limit: Rs. 30 Lakhs
+      Cat C - Low Risk     | Limit: Rs. 1.5 Crore
+      Cat D - Key Accounts | Limit: Rs. 6 Crores
+
+
+================================================================================
+4. MATERIALS MANAGEMENT CONFIGURATION
+================================================================================
+
+--------------------------------------------------------------------------------
+4.1 Material Types
+--------------------------------------------------------------------------------
+
+  FERT - Finished Product
+  HALB - Semi-Finished Product
+  ROH  - Raw Material
+  HAWA - Trading Goods
+  VERP - Packaging Material
+
+
+--------------------------------------------------------------------------------
+4.2 Material Groups
+--------------------------------------------------------------------------------
+
+  Smart Devices (10):
+    SMRT001 - Smart Televisions
+    SMRT002 - Tablets
+    SMRT003 - Smart Home Hubs
+    SMRT004 - Wearable Devices
+
+  Audio & Visual (20):
+    AUDV001 - Speakers & Soundbars
+    AUDV002 - Earphones
+    AUDV003 - Headphones
+    AUDV004 - Home Theatre Systems
+
+  Power & Energy (30):
+    POWR001 - Power Banks
+    POWR002 - Chargers & Adapters
+    POWR003 - Solar Accessories
+    POWR004 - UPS / Inverter Systems
+
+
+--------------------------------------------------------------------------------
+4.3 Valuation
+--------------------------------------------------------------------------------
+
+  Valuation Level     : Plant Level
+  Price Control       : S (Standard Price)
+  Price Determination : 3 (Average Price)
+
+
+================================================================================
+5. SALES & DISTRIBUTION CONFIGURATION
+================================================================================
+
+--------------------------------------------------------------------------------
+5.1 Document Types
+--------------------------------------------------------------------------------
+
+  Sales Documents:
+    IN  - Inquiry
+    QT  - Quotation
+    OR  - Standard Order
+    ZOR - Rush Order
+    CR  - Credit Memo Request
+    DR  - Debit Memo Request
+    RE  - Returns
+    CS  - Cash Sale
+
+  Delivery Documents:
+    LF   - Outbound Delivery
+    NL   - Replenishment Delivery
+    NLCC - Delivery without Reference
+
+  Billing Documents:
+    F2 - Invoice
+    G2 - Credit Memo
+    L2 - Debit Memo
+    S1 - Cancellation Invoice
+
+
+--------------------------------------------------------------------------------
+5.2 Item & Schedule Line Categories
+--------------------------------------------------------------------------------
+
+  Item Categories:
+    TAN  - Standard Item
+    TAO  - Free Goods
+    TANN - Non-Stock Item
+    TATX - Text Item
+
+  Schedule Line Categories:
+    CP - Delivery Schedule
+    CS - Cash Sale
+
+
+--------------------------------------------------------------------------------
+5.3 Partner Functions
+--------------------------------------------------------------------------------
+
+  Customer Partners:
+    SP - Sold-to Party  (Ordering customer)
+    SH - Ship-to Party  (Delivery address)
+    BP - Bill-to Party  (Invoice recipient)
+    PY - Payer          (Payment responsible)
+
+  Sales Document Partners:
+    RE - Responsible Sales Person
+    OA - Sales Office
+    VE - Responsible Employee
+
+
+--------------------------------------------------------------------------------
+5.4 Pricing Procedure: B00001 (NovaSpark Standard)
+--------------------------------------------------------------------------------
+
+   #  | Step Code | Description
+  ----|-----------|----------------------------
+   1  | PR00      | Base Price
+   2  | ZD01      | Volume Discount
+   3  | ZD02      | Customer Discount
+   4  | ZD03      | Promotional Discount
+   5  | --        | Net Value 1
+   6  | KF00      | Freight / Logistics Charges
+   7  | --        | Net Value 2
+   8  | MWST      | GST @ 18%
+   9  | SKTO      | Early Payment Discount
+  10  | --        | Total Payable
+
+
+--------------------------------------------------------------------------------
+5.5 Shipping Configuration
+--------------------------------------------------------------------------------
+
+  Shipping Conditions:
+    10 - Standard Delivery
+    20 - Express / Priority
+    30 - Self Collection
+
+  Route Determination:
+    Route R01: Pune --> Gurugram   (2 days)
+    Route R02: Pune --> Hyderabad  (1 day)
+    Route R03: Gurugram --> Kolkata (3 days)
+
+  Logistics Partners:
+    - Delhivery Express
+    - Ekart Logistics
+    - Own Fleet
+
+
+--------------------------------------------------------------------------------
+5.6 Availability & Credit Check
+--------------------------------------------------------------------------------
+
+  Availability Check:
+    Checking Group : 02
+    Checking Rule  : A (Daily Requirements)
+    ATP Check      : Material Availability
+
+  Credit Check:
+    Type     : A (Automatic)
+    Limit    : Customer Master
+    Reaction : Block / Warning
+
+
+================================================================================
+6. INTEGRATION POINTS
+================================================================================
+
+  SD - MM Integration:
+    - Goods Issue posting from delivery
+    - Inventory updates on delivery confirmation
+    - Material availability check (ATP)
+    - Batch management for serialised goods
+
+  SD - FI Integration:
+    - Revenue recognition triggered on billing
+    - Customer receivables auto-posting
+    - GST accounting & ledger updates
+    - Incoming payment processing
+
+  SD - PP Integration (Where Applicable):
+    - Make-to-Order production scenarios
+    - Production triggered from confirmed sales orders
+    - Assembly orders for custom device configurations
+
+
+================================================================================
+7. USER ROLES & AUTHORIZATION
+================================================================================
+
+  Role                  | Transactions                        | Authorization
+  ----------------------|-------------------------------------|---------------------------
+  Z_NS_ORDER_EXEC       | VA01, VA02, VA03, VA05, VL01N       | Create / Change Sales Orders
+  Z_NS_SALES_MGR        | All Sales + Pricing + Reports       | Full Sales Access
+  Z_NS_WAREHOUSE        | VL01N, VL02N, VL03N, VL06G          | Delivery & Goods Issue
+  Z_NS_BILLING          | VF01, VF02, VF03, VF04              | Billing Document Processing
+  Z_NS_ACCOUNTS         | F-28, FBL5N, FB03                   | Payment & Account Display
+
+
+================================================================================
+8. DATA MIGRATION STRATEGY
+================================================================================
+
+  Phase 1 - Master Data:
+    1. Customer Master  (XD01)
+    2. Material Master  (MM01)
+    3. Pricing Conditions (VK11)
+
+  Phase 2 - Open Documents:
+    1. Open Sales Orders
+    2. Pending Deliveries
+    3. Unbilled Deliveries awaiting invoicing
+
+  Phase 3 - Historical Data:
+    1. Closed Orders (Archival)
+    2. Prior Period Invoices
+    3. Customer Account Statements
+
+
+================================================================================
+9. TESTING STRATEGY
+================================================================================
+
+  Unit Testing:
+    - Individual transaction testing
+    - Master data validation
+    - Configuration verification
+
+  Integration Testing:
+    - End-to-end O2C process
+    - Cross-module flows (SD-FI, SD-MM)
+    - Interface testing
+
+  User Acceptance Testing:
+    - Business scenario sign-off
+    - User training completion
+    - Performance benchmarking
+
+  Go-Live Preparation:
+    - Cutover execution
+    - Final data validation
+    - Hypercare plan activation
+
+
+================================================================================
+10. KEY PERFORMANCE INDICATORS (KPIs)
+================================================================================
+
+  Sales Metrics:
+    Order Fulfilment Rate    : Target >= 95%
+    Order-to-Cash Cycle      : Target <= 14 days
+    On-Time Delivery         : Target >= 92%
+
+  Financial Metrics:
+    Days Sales Outstanding   : Target <= 28 days
+    Invoice Accuracy         : Target >= 99%
+    Bad Debt Ratio           : < 1.5%
+
+  Operational Metrics:
+    Perfect Order Rate       : > 87%
+    Picking Accuracy         : > 99%
+    Delivery Accuracy        : > 96%
+
+
+================================================================================
+11. SUPPORT & MAINTENANCE
+================================================================================
+
+  Level 1:
+    - User queries, basic troubleshooting, password resets, access issues
+
+  Level 2:
+    - Configuration adjustments, custom development, integration issues
+
+  Level 3:
+    - SAP Basis administration, performance tuning, critical incidents
+
+
+================================================================================
+12. FUTURE ENHANCEMENT ROADMAP
+================================================================================
+
+  Phase 2 Enhancements:
+    1. Advanced Shipping Notifications (ASN)
+    2. EDI Integration with marketplace partners
+    3. Dealer Self-Service Web Portal
+    4. Mobile App for field sales team
+
+  Phase 3 Enhancements:
+    1. AI-based demand sensing and forecasting
+    2. Warehouse Management System (WMS) integration
+    3. Transportation Management System (TMS)
+    4. Advanced Analytics & Business Intelligence dashboard
+
+
+================================================================================
+        NovaSpark Electronics Limited  |  SAP Blueprint  |  v1.0  |  April 2026
+================================================================================
